@@ -240,7 +240,7 @@ daemon 模式的状态快照（重启续跑用）：
 | **Cloudflare** | catch-all 邮箱子域、注册时过 Turnstile | ✅ 必需 |
 | **打码平台**（兼容 createTask/getTaskResult 协议） | passive captcha + 兜底 | 可选（浏览器 passive captcha 优先，平台仅作兜底） |
 | **Webshare**（或自有代理） | 出口 IP | ✅ 必需 |
-| **VLM endpoint** | hCaptcha 求解 | 可选（无 VLM 时降级到 CLIP） |
+| **VLM endpoint** | hCaptcha 求解 | 可选（家宽 / 伪家宽出口通常不触发；无 VLM 时降级到 CLIP） |
 | **gpt-team / CPA** | 推下游管理系统 | 可选 |
 
 边界都在 config 里可关 / 可换。
