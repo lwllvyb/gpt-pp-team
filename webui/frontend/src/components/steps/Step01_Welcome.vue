@@ -28,6 +28,8 @@ const modeOptions = [
   { value: "batch", label: "batch — N×", desc: "批量：循环跑 N 个 pipeline" },
   { value: "self_dealer", label: "self_dealer — 1+N", desc: "自产自销：1 owner 付费 + N 个 member 上车" },
   { value: "daemon", label: "daemon — ∞", desc: "常驻：维护补号池容量" },
+  { value: "free_register", label: "free_register — 免费号 + rt + CPA", desc: "循环注册免费 ChatGPT 号 → OAuth 拿 refresh_token → 推 CPA(free)，不走支付" },
+  { value: "free_backfill_rt", label: "free_backfill_rt — 老号补 rt", desc: "读 registered_accounts.jsonl 给老号 OAuth 拿 rt + 推 CPA，跳过已成功/已注销" },
 ];
 
 const paymentOptions = [
